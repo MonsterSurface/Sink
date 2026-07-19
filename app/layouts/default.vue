@@ -17,13 +17,9 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 
-const mobileMenuOpen = shallowRef(false)
-const { title, documentation, telegram, twitter, github } = useAppConfig()
-const { rawStats } = useGithubStats()
-
-function closeMobileMenu() {
-  mobileMenuOpen.value = false
-}
+const showMenu = ref(false)
+const { title } = useAppConfig()
+//const { rawStats } = useGithubStats()
 </script>
 
 <template>
