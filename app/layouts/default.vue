@@ -107,21 +107,6 @@ function closeMobileMenu() {
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
-
-              <Button as-child variant="outline">
-                <a
-                  :href="github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  :title="$t('layouts.footer.social.github')"
-                  :aria-label="$t('layouts.links.github_aria_label')"
-                  class="flex items-center gap-1.5"
-                >
-                  <GitHubIcon class="size-4" aria-hidden="true" />
-                  <Star class="size-3" aria-hidden="true" />
-                  <NumberFlow class="tabular-nums" :value="rawStats.stars" />
-                </a>
-              </Button>
               <SwitchLanguage />
               <SwitchTheme />
             </div>
@@ -202,20 +187,6 @@ function closeMobileMenu() {
                   </nav>
 
                   <div class="mt-auto flex flex-col items-stretch gap-4">
-                    <Button as-child variant="outline">
-                      <a
-                        :href="github"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        :title="$t('layouts.footer.social.github')"
-                        :aria-label="$t('layouts.links.github_aria_label')"
-                        class="flex items-center gap-1.5"
-                      >
-                        <GitHubIcon class="size-4" aria-hidden="true" />
-                        <Star class="size-3" aria-hidden="true" />
-                        <NumberFlow class="tabular-nums" :value="rawStats.stars" />
-                      </a>
-                    </Button>
                     <div class="flex items-center justify-center gap-3">
                       <SwitchLanguage />
                       <SwitchTheme />
@@ -272,60 +243,6 @@ function closeMobileMenu() {
               <span class="text-xl font-black">{{ title }}</span>
             </div>
           </NuxtLink>
-
-          <nav
-            :aria-label="$t('layouts.links.resources_aria_label')"
-            class="flex flex-wrap justify-center gap-2 text-sm"
-          >
-            <Button
-              v-if="twitter"
-              as-child
-              variant="ghost"
-              size="icon"
-            >
-              <a
-                :href="twitter"
-                target="_blank"
-                rel="noopener noreferrer"
-                :title="$t('layouts.footer.social.twitter')"
-                :aria-label="$t('layouts.footer.social.twitter')"
-              >
-                <XIcon aria-hidden="true" />
-              </a>
-            </Button>
-            <Button
-              v-if="telegram"
-              as-child
-              variant="ghost"
-              size="icon"
-            >
-              <a
-                :href="telegram"
-                target="_blank"
-                rel="noopener noreferrer"
-                :title="$t('layouts.footer.social.telegram')"
-                :aria-label="$t('layouts.footer.social.telegram')"
-              >
-                <TelegramIcon aria-hidden="true" />
-              </a>
-            </Button>
-            <Button
-              v-if="github"
-              as-child
-              variant="ghost"
-              size="icon"
-            >
-              <a
-                :href="github"
-                target="_blank"
-                rel="noopener noreferrer"
-                :title="$t('layouts.footer.social.github')"
-                :aria-label="$t('layouts.footer.social.github')"
-              >
-                <GitHubIcon aria-hidden="true" />
-              </a>
-            </Button>
-          </nav>
         </div>
       </div>
     </footer>
